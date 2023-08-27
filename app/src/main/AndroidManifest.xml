@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Timers"></activity>
+        <activity android:name=".OpenClose"></activity>
+
     </application>
 
 </manifest>
