@@ -3,6 +3,7 @@ package com.example.drawerproject
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 
 class OpenClose: Activity() {
@@ -11,12 +12,7 @@ class OpenClose: Activity() {
         setContentView(R.layout.open_close)
 
 
-        val timersBtn = findViewById<Button>(R.id.timers_btn)
-
-        timersBtn.setOnClickListener(){
-            var intent = Intent(this@OpenClose,Timers::class.java)
-            startActivity(intent)
-        }
+        val timersBtn = NavPageButton(R.id.timers_btn, findViewById<View>(android.R.id.content),this,Timers::class.java)
 
     }
 }
