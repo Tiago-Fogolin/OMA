@@ -4,25 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/verdeMarinho"
+    app:layout_constraintLeft_toRightOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/timers_btn"
+        style="@style/BotaoEstilo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="92dp"
-        android:text="Timers"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="416dp"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
+        android:paddingBottom="3dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/Times" />
 
     <Button
         android:id="@+id/open_close_btn"
+        style="@style/BotaoEstilo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="92dp"
-        android:text="Travas"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="48.5dp"
+        android:paddingRight="48.5dp"
+        android:paddingBottom="3dp"
+        android:text="@string/Travas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="132dp"
+        android:background="#00128F6E"
+        android:fontFamily="sans-serif"
+        android:text="@string/Home"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="35sp"
+        android:textStyle="normal"
+        android:typeface="serif"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintLeft_toRightOf="@id/timers_btn"
+        app:layout_constraintRight_toRightOf="@id/timers_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/minhaImagemView"
+        android:layout_width="172dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="36dp"
+        android:contentDescription="@string/Logo"
+        android:src="@drawable/rulo_reme"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
