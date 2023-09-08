@@ -33,7 +33,7 @@
         android:layout_marginEnd="16dp"
         android:paddingLeft="48.5dp"
         android:paddingRight="48.5dp"
-        android:paddingBottom="3dp"
+        android:paddingBottom="4dp"
         android:text="@string/Travas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

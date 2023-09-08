@@ -1,38 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OpenClose">
+    android:background="@color/verdeMarinho">
 
     <Button
         android:id="@+id/timers_btn"
+        style="@style/BotaoNavegacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="92dp"
-        android:text="Timers"
+        android:paddingLeft="49dp"
+        android:paddingTop="12dp"
+        android:paddingRight="49dp"
+        android:paddingBottom="12dp"
+        android:text="@string/Times"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/open_close_btn"
+        style="@style/BotaoNavegacao_Selecionado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
-        android:layout_marginEnd="92dp"
-        android:text="Travas"
+        android:paddingLeft="55dp"
+        android:paddingTop="12dp"
+        android:paddingRight="55dp"
+        android:paddingBottom="12dp"
+        android:text="@string/Travas"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/timers_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="172dp"
-        android:layout_marginTop="36dp"
-        android:text="Travas"
+        android:layout_marginTop="8dp"
+        android:background="@color/white"
+        android:paddingLeft="1dp"
+        android:paddingTop="20dp"
+        android:paddingRight="1dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/gaveta1"
+        style="@style/BotaoEstilo"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:padding="20dp"
+        android:text="@string/Gaveta1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timers_btn" />
+
+    <Button
+        android:id="@+id/abre_fecha1"
+        style="@style/Gavetas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/AbreFecha"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="@+id/gaveta1"
+        app:layout_constraintTop_toTopOf="@+id/gaveta1" />
+
+    <Button
+        android:id="@+id/gaveta2"
+        style="@style/BotaoEstilo"
+        android:layout_width="349dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+        android:text="@string/Gaveta2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gaveta1" />
+
+    <Button
+        android:id="@+id/abre_fecha2"
+        style="@style/Gavetas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/AbreFecha"
+        app:layout_constraintEnd_toEndOf="@+id/gaveta2"
+        app:layout_constraintTop_toTopOf="@+id/gaveta2" />
+
+    <Button
+        android:id="@+id/gaveta3"
+        style="@style/BotaoEstilo"
+        android:layout_width="356dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:padding="20dp"
+        android:text="@string/Gaveta3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gaveta2" />
+
+    <Button
+        android:id="@+id/abre_fecha3"
+        style="@style/Gavetas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/AbreFecha"
+        app:layout_constraintEnd_toEndOf="@+id/gaveta3"
+        app:layout_constraintTop_toTopOf="@+id/gaveta3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

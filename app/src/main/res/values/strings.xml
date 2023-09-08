@@ -3,4 +3,8 @@
     <string name="Times">Horários</string>
     <string name="Travas">Travas</string>
     <string name="Logo">Gaveta</string>
+    <string name="Gaveta1">Gaveta 1</string>
+    <string name="Gaveta2">Gaveta 2</string>
+    <string name="Gaveta3">Gaveta 3</string>
+    <string name="AbreFecha">Abre/Fecha</string>
 </resources>
