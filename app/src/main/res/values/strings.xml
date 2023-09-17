@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">DrawerProject</string>
     <string name="Home">Bem vindo ao App</string>
     <string name="Times">Horários</string>
     <string name="Travas">Travas</string>
