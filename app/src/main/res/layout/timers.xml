@@ -74,13 +74,12 @@
         android:id="@+id/datePicker1"
         android:layout_width="222dp"
         android:layout_height="156dp"
+        android:layout_marginBottom="4dp"
         android:timePickerMode="spinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.164"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.184" />
+        app:layout_constraintBottom_toBottomOf="@+id/gaveta1"
+        app:layout_constraintEnd_toEndOf="@+id/gaveta1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gaveta1" />
 
     <TextView
         android:id="@+id/gaveta2"
@@ -104,12 +103,10 @@
         android:layout_width="213dp"
         android:layout_height="157dp"
         android:timePickerMode="spinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.533" />
+        app:layout_constraintBottom_toBottomOf="@+id/gaveta2"
+        app:layout_constraintEnd_toEndOf="@+id/gaveta2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gaveta2" />
 
     <TextView
         android:id="@+id/gaveta3"
@@ -132,12 +129,10 @@
         android:layout_width="214dp"
         android:layout_height="153dp"
         android:timePickerMode="spinner"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.142"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.887" />
+        app:layout_constraintBottom_toBottomOf="@+id/gaveta3"
+        app:layout_constraintEnd_toEndOf="@+id/gaveta3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gaveta3" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
