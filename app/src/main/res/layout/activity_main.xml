@@ -16,13 +16,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="416dp"
-        android:fontFamily="sans-serif"
-        android:paddingLeft="35dp"
-        android:paddingRight="35dp"
-        android:paddingBottom="3dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/Times"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/Times" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/open_close_btn"
@@ -31,9 +30,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="416dp"
         android:layout_marginEnd="16dp"
-        android:paddingLeft="48.5dp"
-        android:paddingRight="48.5dp"
-        android:paddingBottom="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="45dp"
+        android:paddingRight="45dp"
         android:text="@string/Travas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -42,7 +41,8 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="64dp"
         android:background="#00128F6E"
         android:fontFamily="sans-serif"
         android:text="@string/Home"
@@ -51,9 +51,7 @@
         android:textSize="35sp"
         android:textStyle="normal"
         android:typeface="serif"
-        app:layout_constraintHorizontal_bias="0.533"
-        app:layout_constraintLeft_toRightOf="@id/timers_btn"
-        app:layout_constraintRight_toRightOf="@id/timers_btn"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView

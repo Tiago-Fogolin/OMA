@@ -6,47 +6,49 @@
     android:background="@color/verdeMarinho">
 
     <Button
-        android:id="@+id/timers_btn"
-        style="@style/BotaoNavegacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="49dp"
-        android:paddingTop="12dp"
-        android:paddingRight="49dp"
-        android:paddingBottom="12dp"
-        android:text="@string/Times"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
         android:id="@+id/open_close_btn"
         style="@style/BotaoNavegacao_Selecionado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingLeft="55dp"
-        android:paddingTop="12dp"
-        android:paddingRight="55dp"
-        android:paddingBottom="12dp"
+        android:paddingLeft="42.1dp"
+        android:paddingTop="12.5dp"
+        android:paddingRight="42.1dp"
+        android:paddingBottom="12.5dp"
         android:text="@string/Travas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/timers_btn"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+    <Button
+        android:id="@+id/timers_btn"
+        style="@style/BotaoNavegacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="32.75dp"
+        android:paddingTop="12.5dp"
+        android:paddingRight="32.75dp"
+        android:paddingBottom="12.5dp"
+        android:text="@string/Times"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:background="@color/white"
         android:paddingLeft="1dp"
-        android:paddingTop="20dp"
+        android:paddingTop="23dp"
         android:paddingRight="1dp"
-        android:paddingBottom="20dp"
+        android:paddingBottom="23dp"
+        app:layout_constraintBottom_toTopOf="@+id/gaveta1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
     <TextView
@@ -67,12 +69,12 @@
         style="@style/Gavetas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/AbreFecha"
         android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@+id/gaveta1"
         app:layout_constraintEnd_toEndOf="@+id/gaveta1"
         app:layout_constraintTop_toTopOf="@+id/gaveta1" />
 
@@ -93,11 +95,11 @@
         style="@style/Gavetas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/AbreFecha"
+        app:layout_constraintBottom_toBottomOf="@+id/gaveta2"
         app:layout_constraintEnd_toEndOf="@+id/gaveta2"
         app:layout_constraintTop_toTopOf="@+id/gaveta2" />
 
@@ -118,11 +120,11 @@
         style="@style/Gavetas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="16dp"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:text="@string/AbreFecha"
+        app:layout_constraintBottom_toBottomOf="@+id/gaveta3"
         app:layout_constraintEnd_toEndOf="@+id/gaveta3"
         app:layout_constraintTop_toTopOf="@+id/gaveta3" />
 
