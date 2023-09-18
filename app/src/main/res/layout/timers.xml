@@ -137,7 +137,7 @@
         app:layout_constraintStart_toStartOf="@+id/gaveta3" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/sendButton"
         style="@style/Enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -7,11 +7,7 @@ import android.widget.Button
 import androidx.core.content.ContextCompat.startActivity
 import java.sql.RowId
 
-class NavPageButton (btnId: Int, currentView: View, from: Context, to: Class<*>){
-    private var btnId = btnId
-    private var currentView = currentView
-    private var from = from
-    private var to = to
+class NavPageButton (private var btnId: Int, private var currentView: View, private var from: Context, private var to: Class<*>){
 
     init{
         var btn = this.currentView.findViewById<Button>(this.btnId)
