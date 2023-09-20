@@ -13,7 +13,8 @@ class OpenCloseButton(private val btnId: Int, private val currentView: View) {
         contador++
 
         btn.setOnClickListener {
-            Connection.sendMessage("$contInt")
+            val conn = Connection.makeDefaultConnection()
+            conn.sendMessage("$contInt")
         }
 
     }

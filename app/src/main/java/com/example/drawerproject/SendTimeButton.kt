@@ -16,7 +16,8 @@ class SendTimeButton (private var btnId: Int, private var currentView: View) {
             for(timer in Timer.timers){
                 timeString += timer.getTime() + " "
             }
-            Connection.sendMessage(timeString)
+            val conn = Connection.makeDefaultConnection()
+            conn.sendMessage(timeString)
         }
     }
 
