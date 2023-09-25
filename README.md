@@ -28,7 +28,7 @@ Eduardo Oki: Criamos uma classe para o botão de navegação.
 
 Eduardo Petricone: NavPageButton: é a classe que atribui as funções dos botões, ou seja, direciona o usuário para a respectiva aba do aplicativo quando o botão é acionado.
 
-Luan Motta:
+Luan Motta: Codificamos o NavPageButton, que é um botão com o propósito de alternar entre as páginas do aplicativo.
 
 Raul Mozart: Uma das classes que criamos foi a NavPageButton que possui a funcionalidade do usuário trocar de página do aplicativo ao clicar nos botões de navegação.
 
@@ -56,7 +56,7 @@ Eduardo Oki: Criamos os atributos “btnld”, para pegar o id do botão, o “c
 Eduardo Petricone: Nessa parte é onde é feito o código de funcionamento do botão, onde tem os seguintes atributos: btnId: Representa o ID dos botões na interface; currentView: Serve para localizar o botão no estado atual da tela com o btnId, para que a lógica do clique do botão seja configurada corretamente; from: Serve como referência de onde o botão é clicado; to: É uma referência à classe da atividade que será iniciada quando o botão for clicado.
 
 
-Luan Motta:
+Luan Motta: Os atributos, como características dessa classe, são btnId (identificação do botão), currentView (onde esse botão se encontra), from (de qual página esse botão levará) e to (para qual página esse botão levará).
 
 Raul Mozart: Os atributos criados nesse caso foram: btnId, currentView, from e to: btnId: Irá pegar o ID do botão; currentView: Encontrará a localização do botão no aplicativo em base a hierarquia dos elementos da respectiva página, utilizando essa localização para poder configurar um evento de click; from: Pegará o contexto atual do aplicativo, ou seja, pegará qual página o usuário está através dos arquivos e se preparará para trocar de página; to: Irá pegar a Classe da página que o usuário quer ir, para que ocorra essa transição. 
 
@@ -89,7 +89,7 @@ Eduardo Oki: Temos o métodos da classe timers que irá retornar para a gente o 
 
 Eduardo Petricone: Esse método transforma os timers em string para formatar esses valores de uma maneira mais legível por se tratar de horário.
 
-Luan Motta:
+Luan Motta: O método getTime tem como função retornar as horas e minutos definidos no aplicativo para string, com finalidade de melhor comparação com o dispositivo.
 
 Raul Mozart: O método getTime() da classe timers possui a função de pegar o horário que o usuário escolher no aplicativo e irá transformá-la em uma string.
 
@@ -135,7 +135,7 @@ Eduardo Oki: No atributo estático a váriavel contador é um atributo estático
 
 Eduardo Petricone: Aqui usamos a variável estática contador para marcar quantas instâncias dessa classe foram criadas e também para cada botão ter um ID diferente do outro, os atributos e métodos estáticos ficam dentro da estrutura “companion object”
 
-Luan Motta:
+Luan Motta: No kotlin, esses atributos ficam dentro do “companion object”, pertencendo à classe e armazenando informações que são comuns a todas as instâncias da classe, nesse caso, atribuindo um ID único para cada objeto.
 
 Raul Mozart: A variável contador é um atributo estático, ele conta quantas instâncias(Objetos) foram feitas através dessa classe, onde cada botão criado, terá um valor contador próprio. OBS: em Kotlin atributos/métodos estáticos ficam dentro da estrutura “companion object”.
 
@@ -172,7 +172,7 @@ Eduardo Oki: Usamos no método da classe “connection”, onde ele é um métod
 
 Eduardo Petricone: Aqui temos um método da classe connection, ele é um método fábrica, ou seja, fornece uma maneira mais flexível e controlada de criar instâncias de classes. Sua função aqui serve para criar uma conexão padrão, já que sua conexão será em apenas um dispositivo, isso acaba facilitando e assim não é necessário passar o mesmo endereço de ip e porta toda vez.
 
-Luan Motta:
+Luan Motta: makeDefaultConnection é um método estático que por definição pertence à classe e não a uma instância dela, não precisando ser instanciado para ser chamado. Nesse caso, implementando uma função que será usada por vários métodos dessa classe, sendo comum a eles.
 
 Raul Mozart: O makeDefaultConnection é um método da classe Connection, ele é um método fábrica, que serve para criar uma conexão padrão, já que vamos conectar a só um dispositivo e assim não precisamos passar o mesmo ip e porta toda vez.
 
@@ -203,7 +203,7 @@ Eduardo Oki: No kotlin o método construtor é realizado diretamente na frente d
 Eduardo Petricone: Aqui foi criado uma classe Timer, com dois parâmetros no construtor primário. Em kotlin, o método construtor é feito logo na frente do nome da classe, e os atributos já são declarados nele.
 
 
-Luan Motta:
+Luan Motta: Na classe Timer, o método construtor é usado para inicializar os atributos do objeto, sendo eles timerId e currentView. Sendo feito diretamente na frente do nome da classe.
 
 Raul Mozart: O método construtor criado foi o Timer, onde no Kotlin, o método construtor é feito diretamente na frente do nome da classe, e os atributos já são declarados logo nele dentro dos parênteses.
 
@@ -234,7 +234,7 @@ Eduardo Oki: Deixamos os atributos dos botões como privados para que não sejá
 
 Eduardo Petricone: Aqui foi declarada a classe OpenCloseButton, onde seu propósito é lidar com os botões do aplicativo na inteface, todos os atributos dos botões são privados, pois não deve ser possível alterá-los fora da classe.
 
-Luan Motta:
+Luan Motta: Os atributos btnId e currentView, por garantia de não sejam alterados fora da classe OpenCloseButton foram definidos como sendo privados.
 
 Raul Mozart: Os atributos dos botões são todos privados, pois cada um deles possui o seu próprio ID e estará em uma posição da página do aplicativo.
 
@@ -268,7 +268,7 @@ Eduardo Oki: Temos como exemplo de instância a classe de botão de navegação.
 Eduardo Petricone: Aqui é um exemplo de instância da classe de navegação dos botões. Criamos duas instâncias, a “timersBtn”e a “openCloseBtn”, onde ambas estão vínculadas ao direcionamento dos botões na interface do aplicativo, onde a “timerBtn”direciona para a aba dos timers, e o “openCloseBtn” é uma segunda instância da classe “NavPageButton”, que direciona a interface para a aba das travas da caixa, utilizando os argumentos “findViewById<View>(android.R.id.content)” e “r.id.open_close_btn”.
 
 
-Luan Motta:
+Luan Motta: Dentro da classe MainActivity, foi instanciado a classe NavPageButton, tendo como parâmetros o ID do botão, a view onde ele está from (de qual página esse botão levará) e to (para qual página esse botão levará).
 
 Raul Mozart: Instanciamos os objetos timersBtn e openCloseBtn com a classe NavPageButton, para que cada botão vá para a sua respectiva página
 
@@ -296,7 +296,7 @@ A NavePageButton vai ter a função do usuário transitar pelo app entre as pág
 
 Eduardo Petricone: Utilizamos diagrama em UML, uma linguagem de modelagem gráfica usada para visualizar, especificar, construir e documentar sistemas de softwares complexos. Ele fornece uma maneria padronizada de representar visualmente diferentes aspectos de um sistema, como estrutura, comportamento, interações e processos. 
 
-Luan Motta:
+Luan Motta: Usamos o diagrama de classes UML para o projeto. As classes MainActivity, Timers e OpenClose tem relação de herança com a classe Activty, herdando suas propriedades e métodos. Já as classes OpenCloseButton e SendTimeButton tem relação de agregação com a classe Connection, ou seja, são partes dela. 
 
 Raul Mozart: As classes que fizemos foram a Activity,MainActivity,Timers,OpenClouse,OpenClouseButton,SendTimeButton, Connection, NavPageButton e Timer. As classes MainActivity, Timers e OpenClouse herdam características da Activity onde após herdar as características, é possível fazer a troca de página entre as páginas. Já a Connction herda da OpenClouseButton e do SendTimeButton, para que as informações que o usuário escolheu, sejam enviadas para a Esp32. A NavPageButton tem a função do usuário transitar pelo app de página em página e a classe Timer pega o horário que o usuário escolheu e transforma ele em uma str.
 
@@ -379,7 +379,7 @@ Eduardo Oki: Fizemos esse teste unitário para poder testar a conexão, nós usa
 
 Eduardo Petricone: As importações iniciais estão trazendo classes necessárias do Mockito, JUnit e Kotlin Test para configurar e executar o teste unitário. Usamos o @Before para executar antes dos outros métodos e o “MockitoAnnotations.innitMocks(this)” para inicializar todas as variáveis “@Mock”. Em @Teste, a partir do código “`when`(mockUrl.openConnection()).thenReturn(mockConnection)” é onde definimos as funções dos mocks antes de executá-los. Em “verify(mockUrl, times(1)).openConnection()” e adiante, é onde fizemos a verificação de cada método mock, para ver se foram chamados uma única vez.
 
-Luan Motta:
+Luan Motta: Usando a library de simulação de objetos Mockito, implementamos testes unitários para a classe que fará a conexão, que tem como objetivo retornar uma resposta bem sucedida do protocolo HTTP.
 
 Raul Mozart: Esse teste unitário foi feito para testar a conexão, foi utilizado a biblioteca Mockito que é usada para criar objetos simulados (mocks) para testar o comportamento de objetos e ela verifica se a resposta da conexão foi positiva.
 
