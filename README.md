@@ -20,6 +20,8 @@ class NavPageButton (private var btnId: Int, private var currentView: View, priv
 }
 
 ```
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/main/java/com/example/drawerproject/NavPageButton.kt)
+
 Explicações:
 
 Artur Badona: Criou a classe do botão de navegação.
@@ -47,6 +49,8 @@ ___
 class NavPageButton (private var btnId: Int, private var currentView: View, private var from: Context, private var to: Class<*>)
 
 ```
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/main/java/com/example/drawerproject/NavPageButton.kt)
+
 Explicações:
 
 Artur Badona: Criou a classe do botão de navegação com os atributos do ID do botão, da visão atual, de onde a navegação vai e para onde.
@@ -81,6 +85,8 @@ fun getTime(): String {
     }
 
 ```
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/main/java/com/example/drawerproject/Timer.kt)
+
 Explicações:
 
 Artur Badona: Cria o método que retorna os horários dos timers em formato de String.
@@ -127,6 +133,8 @@ class OpenCloseButton(private val btnId: Int, private val currentView: View) {
 
 
 ```
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/main/java/com/example/drawerproject/OpenCloseButton.kt)
+
 Explicações:
 
 Artur Badona: Cria a classe de botão com o atributo estático “contador” que diferencia cada botão criado.
@@ -164,6 +172,9 @@ companion object{
 
     }
 ```
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/main/java/com/example/drawerproject/Connection.kt)
+
+
 Explicações:
 
 Artur Badona: Cria método estático que cria conexão padrão recebendo determinados valores de ip e porta, já que a conexão será feita em apenas um mesmo dispositivo e os valores não irão mudar.
@@ -194,6 +205,9 @@ ___
 class Timer (private val timerId: Int, private val currentView: View)
 
 ```
+
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/main/java/com/example/drawerproject/Timer.kt)
+
 Explicações:
 
 Artur Badona: Cria a classe de timers utilizando método construtor.
@@ -226,6 +240,9 @@ ___
 class OpenCloseButton(private val btnId: Int, private val currentView: View)
 
 ```
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/main/java/com/example/drawerproject/OpenCloseButton.kt)
+
+
 Explicações:
 
 Artur Badona: Cria atributos privados na classe dos botões, pois não devem ser alterados fora da classe.
@@ -259,6 +276,8 @@ val timersBtn = NavPageButton(R.id.timers_btn, findViewById<View>(android.R.id.c
 val openCloseBtn = NavPageButton(R.id.open_close_btn, findViewById<View>(android.R.id.content),this,OpenClose::class.java)
 
 ```
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/main/java/com/example/drawerproject/MainActivity.kt)
+
 Explicações:
 
 Artur Badona: Instancia objetos da classe do botão de navegação.
@@ -298,7 +317,7 @@ Eduardo Petricone: Utilizamos diagrama em UML, uma linguagem de modelagem gráfi
 
 Luan Motta: Usamos o diagrama de classes UML para o projeto. As classes MainActivity, Timers e OpenClose tem relação de herança com a classe Activty, herdando suas propriedades e métodos. Já as classes OpenCloseButton e SendTimeButton tem relação de agregação com a classe Connection, ou seja, são partes dela. 
 
-Raul Mozart: As classes que fizemos foram a Activity,MainActivity,Timers,OpenClouse,OpenClouseButton,SendTimeButton, Connection, NavPageButton e Timer. As classes MainActivity, Timers e OpenClouse herdam características da Activity onde após herdar as características, é possível fazer a troca de página entre as páginas. Já a Connction herda da OpenClouseButton e do SendTimeButton, para que as informações que o usuário escolheu, sejam enviadas para a Esp32. A NavPageButton tem a função do usuário transitar pelo app de página em página e a classe Timer pega o horário que o usuário escolheu e transforma ele em uma str.
+Raul Mozart: As classes que fizemos foram a Activity,MainActivity,Timers,OpenClose,OpenCloseButton,SendTimeButton, Connection, NavPageButton e Timer. As classes MainActivity, Timers e OpenClose herdam características da Activity onde após herdar as características, é possível fazer a troca de página entre as páginas. Já a Connction herda da OpenCloseButton e do SendTimeButton, para que as informações que o usuário escolheu, sejam enviadas para a Esp32. A NavPageButton tem a função do usuário transitar pelo app de página em página e a classe Timer pega o horário que o usuário escolheu e transforma ele em uma str.
 
 
 Ricardo de Paula: Na UML temos as classes Timers, OpenCloseButton, OpenClose, MainActivity, SendTimerButton,
@@ -321,71 +340,71 @@ ___
 
 ```kotlin
 
-import org.mockito.Mockito.*
-import org.mockito.Mock
-import org.mockito.MockitoAnnotations
+import com.example.drawerproject.Connection
+import kotlinx.coroutines.runBlocking
+import okhttp3.mockwebserver.MockResponse
+import okhttp3.mockwebserver.MockWebServer
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import kotlin.test.assertEquals
+import java.net.HttpURLConnection
 
 class ConnectionTest {
 
-    @Mock
-    private lateinit var mockUrl: URL
-    @Mock
-    private lateinit var mockConnection: HttpURLConnection
-    @Mock
-    private lateinit var mockOutputStream: OutputStream
+    private lateinit var server: MockWebServer
+    private lateinit var connection: Connection
 
     @Before
-    fun configurar() {
-        MockitoAnnotations.initMocks(this)
+    fun setUp() {
+        server = MockWebServer()
+        server.start()
+        val baseUrl = server.url("/")
+        connection = Connection(baseUrl.host, baseUrl.port.toString())
+    }
+
+    @After
+    fun tearDown() {
+        server.shutdown()
     }
 
     @Test
-    fun testeEnviarMensagemComSucesso() {
-        val mensagem = "Oi, servidor!"
-        val responseCode = HttpURLConnection.HTTP_OK
+    fun testSendMessage() {
+        val message = "Test Message"
 
-        // Aqui estou definindo como deve ser o comportamentos do mocks antes de usá-los
-        `when`(mockUrl.openConnection()).thenReturn(mockConnection)
-        `when`(mockConnection.requestMethod).thenReturn("POST")
-        `when`(mockConnection.doOutput).thenReturn(true)
-        `when`(mockConnection.outputStream).thenReturn(mockOutputStream)
-        `when`(mockConnection.responseCode).thenReturn(responseCode)
+        server.enqueue(MockResponse().setResponseCode(HttpURLConnection.HTTP_OK))
 
-        val connection = Connection(mockUrl, "60")
+        runBlocking {
+            connection.sendMessage(message)
+        }
 
-        connection.sendMessage(mensagem)
 
-        // Aqui eu verifico de cada metodo mock foi chamado apenas uma vez
-        verify(mockUrl, times(1)).openConnection()
-        verify(mockConnection, times(1)).requestMethod
-        verify(mockConnection, times(1)).doOutput
-        verify(mockConnection, times(1)).outputStream
-        verify(mockOutputStream, times(1)).write(mensagem.toByteArray())
-        verify(mockOutputStream, times(1)).close()
+        val request = server.takeRequest()
+        assert(request.method == "POST")
+        assert(request.body.readUtf8() == message)
     }
 }
 
+
 ```
+
+Caminho do código: (https://github.com/Tiago-Fogolin/OMA/blob/master/app/src/test/java/com/example/drawerproject/ConnectionTest.kt)
 
 Explicações:
 
-Artur Badona: Testa o método de envio de mensagens da classe Connections utilizando o framework Mockito. Define o comportamento dos mocks determinando o que deve ser retornado por eles. Verifica se cada método está sendo testado e se estão se comportando como o esperado.
+Artur Badona: Testa o método de envio de mensagens da classe Connections utilizando o framework MockWebServer. Define o comportamento dos mocks determinando o que deve ser retornado por eles. Verifica se cada método está sendo testado e se estão se comportando como o esperado.
 
 
 Eduardo Oki: Fizemos esse teste unitário para poder testar a conexão, nós usamos a biblioteca Mockito na qual ela é utilizada para criar objetos simulados(mocks), onde ele irá testar o comportamento do objeto e também irá verificar para nós se a resposta foi positiva ou não.
 
-Eduardo Petricone: As importações iniciais estão trazendo classes necessárias do Mockito, JUnit e Kotlin Test para configurar e executar o teste unitário. Usamos o @Before para executar antes dos outros métodos e o “MockitoAnnotations.innitMocks(this)” para inicializar todas as variáveis “@Mock”. Em @Teste, a partir do código “`when`(mockUrl.openConnection()).thenReturn(mockConnection)” é onde definimos as funções dos mocks antes de executá-los. Em “verify(mockUrl, times(1)).openConnection()” e adiante, é onde fizemos a verificação de cada método mock, para ver se foram chamados uma única vez.
+Eduardo Petricone: Este é um teste unitário escrito em Kotlin usando a biblioteca de teste JUnit e a biblioteca de simulação de servidor OkHttp MockWebServer. O objetivo deste teste é verificar se a classe “Connection” está se comportando corretamente quando se comunica com o servidor. No método “setUp()”, um servidor simulado ”MockWebServer” é inicializado. O URL base do servidor é obtido a partir do servidor e passado para uma instância da classe “Connection”. Isso configura o ambiente para o teste. A função “runBlocking” é usada para executar o método “sendMessage()”. O “val request = server.takeRequest” serve para obter a próxima solicitaçao feita ao servidor. As asserções “assert(request.method == “POST”)” e “assert(request.body.readUtf8() == message)” serve para verificar se a solicitação foi um método POST e se o corpo da solicitação corresponde  com a mesnagem de teste préviamente definida. Resumindo: O teste serve para verificar se a classe “Connection” está funcionando corretamente ao enviar uma mensagem para o servidor.
 
-Luan Motta: Usando a library de simulação de objetos Mockito, implementamos testes unitários para a classe que fará a conexão, que tem como objetivo retornar uma resposta bem sucedida do protocolo HTTP.
+Luan Motta: Codificou testes unitários: Usando a library mockwebserver que simula o comportamento de um servidor HTTP real, implementamos esse teste unitário para a classe que fará a conexão, que tem como objetivo verificar se está enviando as mensagens corretamente.
 
-Raul Mozart: Esse teste unitário foi feito para testar a conexão, foi utilizado a biblioteca Mockito que é usada para criar objetos simulados (mocks) para testar o comportamento de objetos e ela verifica se a resposta da conexão foi positiva.
+Raul Mozart: Esse teste unitário foi feito para testar a conexão, foi utilizado a biblioteca MockWebServer que é usada para criar objetos simulados (mocks) para testar o comportamento de objetos e ela verifica se a resposta da conexão foi positiva.
 
 Ricardo de Paula: No teste unitário utilizamos a biblioteca Mockito e sendo realizado o envio de uma mensagem ao
 servidor caso fosse obtido sucesso.
 
 Thauany Domingues: Inicialmente codificamos testes unitários simples para as principais funções do projeto, como a conexão, com a abordagem Desenvolvimento Direcionado por Testes (Test-After Development - TAD), pois ao implementar essa prática o projeto já estava em execução. Segue o exemplo da classe de teste da função sendMessage da classe Connection. 
 
-Tiago Fogolin: Esse é um exemplo de teste unitário utilizado para testar o código do app, nele estamos testando a classe de conexão, em que é preciso que seja retornado um código de sucesso (200), e a mensagem precisa ser enviada corretamente ao servidor. Ele foi feito usando a biblioteca Mockito
+Tiago Fogolin: Esse é um exemplo de teste unitário utilizado para testar o código do app, nele estamos testando a classe de conexão, em que é preciso que seja retornado um código de sucesso (200), e a mensagem precisa ser enviada corretamente ao servidor. Ele foi feito usando a biblioteca MockWebServer, que simula um servidor http.

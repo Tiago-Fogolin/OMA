@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DrawerProject"
 include(":app")
+include(":app:test")
