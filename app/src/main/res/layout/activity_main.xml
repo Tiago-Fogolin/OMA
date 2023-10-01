@@ -48,7 +48,7 @@
         android:text="@string/Home"
         android:textAlignment="center"
         android:textColor="#fff"
-        android:textSize="35sp"
+        android:textSize="34sp"
         android:textStyle="normal"
         android:typeface="serif"
         app:layout_constraintEnd_toEndOf="parent"
