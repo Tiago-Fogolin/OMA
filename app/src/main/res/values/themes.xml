@@ -4,7 +4,7 @@
     <style name="BotaoEstilo">
         <item name="android:background">@drawable/my_button</item>
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">22.5sp</item>
     </style>
     <style name="BotaoNavegacao">
         <item name="android:background">@drawable/button__navgation</item>
