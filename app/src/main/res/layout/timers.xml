@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/open_close_btn"
-        style="@style/BotaoNavegacao_Selecionado"
+        style="@style/BotaoNavegacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="42.1dp"
@@ -25,7 +25,7 @@
 
     <Button
         android:id="@+id/timers_btn"
-        style="@style/BotaoNavegacao"
+        style="@style/BotaoNavegacao_Selecionado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="32.75dp"

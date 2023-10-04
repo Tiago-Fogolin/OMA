@@ -8,7 +8,7 @@
     </style>
     <style name="BotaoNavegacao">
         <item name="android:background">@drawable/button__navgation</item>
-        <item name="android:textColor">#fff</item>
+        <item name="android:textColor">#CCCCCC</item>
         <item name="android:textSize">30sp</item>
     </style>
     <style name="BotaoNavegacao_Selecionado">
