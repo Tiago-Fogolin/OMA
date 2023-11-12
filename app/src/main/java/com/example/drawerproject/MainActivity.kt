@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val timersBtn = NavPageButton(R.id.timers_btn, findViewById<View>(android.R.id.content),this,Timers::class.java)
         val openCloseBtn = NavPageButton(R.id.open_close_btn, findViewById<View>(android.R.id.content),this,OpenClose::class.java)
 
-    }
 
 
+}
 }
