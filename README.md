@@ -1,4 +1,4 @@
-
+# P1
 **Conceitos básicos:**
 
   
@@ -408,3 +408,299 @@ servidor caso fosse obtido sucesso.
 Thauany Domingues: Inicialmente codificamos testes unitários simples para as principais funções do projeto, como a conexão, com a abordagem Desenvolvimento Direcionado por Testes (Test-After Development - TAD), pois ao implementar essa prática o projeto já estava em execução. Segue o exemplo da classe de teste da função sendMessage da classe Connection. 
 
 Tiago Fogolin: Esse é um exemplo de teste unitário utilizado para testar o código do app, nele estamos testando a classe de conexão, em que é preciso que seja retornado um código de sucesso (200), e a mensagem precisa ser enviada corretamente ao servidor. Ele foi feito usando a biblioteca MockWebServer, que simula um servidor http.
+___
+# P2
+**Conceitos básicos**
+
+*Instalou e usou bibliotecas de terceiros:*
+
+```
+    Utilizamos bibliotecas no código da esp, usamos a RTC Lib e a PWM.
+```
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin:
+___
+
+*Codificou enums:*
+
+```c
+enum EstadoGaveta {
+    ABERTA,
+    FECHADA
+};
+```
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin:  
+___
+
+*Codificou propriedades:*
+
+```kotlin
+data class TimeData(var hour: String, var minute: String){
+    private var time = "$hour:$minute"
+
+    fun getHour() : String{
+        return hour
+    }
+
+    fun setHour(newHour: String){
+        this.hour = newHour
+    }
+
+    fun getMinute() : String{
+        return minute
+    }
+
+    fun SetMinute(newMinute: String){
+        this.minute = newMinute
+    }
+
+    fun getTime() : String{
+        return this.time
+    }
+}
+```
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin:
+___
+
+*Codificou classes abstratas ou classes virtuais:*
+
+```kotlin
+abstract class Connection(private val ip: String, private val port: String) {
+
+    abstract fun sendMessage(message: String)
+}
+```
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin:    
+___
+
+**Design:**
+
+
+
+*Identificou e codificou classes de dados*
+
+```kotlin
+    data class TimeData(var hour: String, var minute: String){
+    private var time = "$hour:$minute"
+
+    fun getHour() : String{
+        return hour
+    }
+
+    fun setHour(newHour: String){
+        this.hour = newHour
+    }
+
+    fun getMinute() : String{
+        return minute
+    }
+
+    fun SetMinute(newMinute: String){
+        this.minute = newMinute
+    }
+
+    fun getTime() : String{
+        return this.time
+    }
+}
+```
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin:
+___
+
+**Boas Práticas**
+
+
+
+*Codificou padrões de projeto*
+
+```kotlin
+fun makeDefaultConnection(): HTTPConnection {
+            val ip = "" //Colocar ip padrão
+            val port = "" //Colocar porta padrão
+            return HTTPConnection(ip, port)
+}
+```
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin: 
+___
+*Usou conceitos de SOLID*
+
+```kotlin
+abstract class Connection(private val ip: String, private val port: String) {
+
+    abstract fun sendMessage(message: String)
+}
+```
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin:
+
+___
+**Extras**
+
+
+
+*Versionou todo o projeto integrador com GIT*
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin: 
+
+___
+*Publicou todo projeto integrador no Gitlab, Github, ou semelhantes*
+
+
+Explicações:
+
+Artur Badona: 
+
+Eduardo Oki: 
+
+Eduardo Petricone:
+
+Luan Motta: 
+
+Raul Mozart: 
+
+Ricardo de Paula: 
+
+Thauany Domingues:
+
+Tiago Fogolin:     
