@@ -1,0 +1,173 @@
+commit 967c9bab0ad204a6d4f3fd297e901cf64a70f489
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Sat Nov 25 16:31:40 2023 -0300
+
+    Atualizando README.md
+
+commit 20941026966e4e7ff398a8f6ec68bfb7ab33fbb7
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Sun Nov 12 17:53:52 2023 -0300
+
+    Botão teste
+
+commit 8b6b97d8b692aa01443ec8923dcd96c69f8e0de0
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Sun Nov 12 17:45:07 2023 -0300
+
+    Listview teste
+
+commit 5bef5202263ef278f32f0b8cb8b4fd51954b6aa2
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Wed Oct 4 16:54:18 2023 -0300
+
+    Troca de páginas mais perceptível pelo menu de navegação
+
+commit cf1a2c0dce641463ef25bfb8bf55f13c4bff6f57
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Tue Oct 3 17:41:06 2023 -0300
+
+    Modificação do tamanho do texto do botão
+
+commit 22382904e8d02149981d2fa5f4c009904b66ca88
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Sun Oct 1 17:14:26 2023 -0300
+
+    teste home
+
+commit 4abf36d3fde0912338543865cfc91764497cb97c
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Mon Sep 25 16:25:29 2023 -0300
+
+    Atualizando readme e configurações do teste unitário
+
+commit e32a5876f0f03f65b67ffe78bd89161e02b9c951
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Mon Sep 25 15:10:43 2023 -0300
+
+    Subindo o teste unitário
+
+commit 1d25e69c72ff7756c68bfbb68ea73987b6740cfd
+Author: Luan Motta <128438693+LuanM23@users.noreply.github.com>
+Date:   Mon Sep 25 00:50:40 2023 -0300
+
+    README.md
+
+commit 4473243827739788a55ad6cb986800a9a097d5e0
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Sun Sep 24 22:36:24 2023 -0300
+
+    Atualizando o readme
+
+commit 5010463068319125fccc94784a60234a6bfd25b5
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Sun Sep 24 17:33:17 2023 -0300
+
+    Enviando readme para teste
+
+commit 8e3dc2a2dcbc63868e16c86041cad830f401f8ea
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Wed Sep 20 12:04:00 2023 -0300
+
+    Melhorando classe de conexão
+
+commit ebbee2bc283527071f3e8851addd0975861e6eb5
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Mon Sep 18 10:02:18 2023 -0300
+
+    Terminando os botões e adicionando classe de conexão
+
+commit fc7c587e48111f6995bbb7137244ed2dbe236d66
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Sun Sep 17 21:48:34 2023 -0300
+
+    teste do timer 3
+
+commit b04ff683443abbed7529047dd8619b481a9b8c38
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Sun Sep 17 21:40:51 2023 -0300
+
+    teste do timer 2
+
+commit c3da3b0ea48ed4455572385c856f3e6f1bde89f7
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Sun Sep 17 21:32:59 2023 -0300
+
+    teste do timer
+
+commit 828490f54967e097a497ddfc9664d86c05e28b06
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Sun Sep 17 21:14:53 2023 -0300
+
+    teste dos posicionamentos
+
+commit 9591a84c9838bf917a0d74254d9f2eefb58cdeda
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Sun Sep 17 15:34:59 2023 -0300
+
+    Página Horário a ser questionada
+
+commit aee6ca776f81533eaa31f2030b265e1bb9c7b0c0
+Author: LuanM23 <luanmfernandes95@gmail.com>
+Date:   Mon Sep 11 15:52:43 2023 -0300
+
+    commit timer
+
+commit 45418eb84adb44dc9fc3a6ee081d75cf8bfbe41c
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Fri Sep 8 18:06:12 2023 -0300
+
+    Página travas sendo analizada
+
+commit 0fc617483ad43af813040e3abcd0d911efa94f69
+Author: Raul Mozart <raulmab@gmail.com>
+Date:   Thu Sep 7 17:30:27 2023 -0300
+
+    Estilização home finalizada (aceito sujestões)
+
+commit 6c1854103708c63220f0c572b8cd8922e0411170
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Fri Sep 1 11:19:25 2023 -0300
+
+    Adicionando arquivos de classes
+
+commit 33ca527083ef60fffd350bf13f53fe169a955077
+Merge: ec9b042 e00d03f
+Author: Tiago-Fogolin <125079595+Tiago-Fogolin@users.noreply.github.com>
+Date:   Sun Aug 27 19:21:10 2023 -0300
+
+    Merge pull request #2 from Tiago-Fogolin/layout
+    
+    Finalizando a navegação
+
+commit e00d03f59a2ce27d9edcda0c9b4cea49230b5311
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Sun Aug 27 19:19:40 2023 -0300
+
+    Finalizando a navegação
+
+commit ec9b04231792f86afdf4ee82187793fc17f70081
+Merge: fbb33d5 91308aa
+Author: Tiago-Fogolin <125079595+Tiago-Fogolin@users.noreply.github.com>
+Date:   Sun Aug 27 19:02:27 2023 -0300
+
+    Merge pull request #1 from Tiago-Fogolin/layout
+    
+    Adicionando navegação entre as páginas
+
+commit 91308aa28f0e4250258f5b1743016687e445035a
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Sun Aug 27 19:00:57 2023 -0300
+
+    Adicionando navegação entrae
+
+commit fbb33d5839ce223c0aca9368d13ddfb6108451d2
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Wed Aug 23 14:34:17 2023 -0300
+
+    Adicionar arquivo README
+
+commit b80eedf83c1c19bf4676b1bbc3efd49a977f8f21
+Author: Tiago-Fogolin <ticofogolin@gmail.com>
+Date:   Wed Aug 23 14:27:14 2023 -0300
+
+    Initial commit
