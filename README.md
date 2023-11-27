@@ -421,7 +421,7 @@ ___
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Utilizou as bibliotecas RTC Lib e PWM no código da esp, para obter o tempo atual e controlar o servo motor.
 
 Eduardo Oki: 
 
@@ -429,13 +429,13 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: Utilizamos as bibliotecas RTC Lib e a PWM, a RTC Lib foi utilizada para podermos mexer no componente do RTC e usamos também a PWM para controlar a quantidade de energia fornecida aos dispositivos elétricos. 
 
-Ricardo de Paula: 
+Ricardo de Paula: Usamos o RTC Lib para configurar e utilizar o RTC, na qual é responsável por salvar o horário atual e por meio de uma bateria própria mantém o horário atualizado. Usamos a PWM para controlar a quantidade de energia dirigida aos dispositivos.
 
 Thauany Domingues:
 
-Tiago Fogolin:
+Tiago Fogolin: As bibliotecas utilizadas na esp serviram para fazer funcionar o RTC (RTC Lib), que além de conseguir conectar o componente, adiciona funções para pegar o horário e data atual, e o servo motor (PWM) que possibilita fazer o servo girar.
 ___
 
 *Codificou enums:*
@@ -450,7 +450,7 @@ enum EstadoGaveta {
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Criou enums para as constantes do estado da gaveta (aberta ou fechada).
 
 Eduardo Oki: 
 
@@ -458,13 +458,13 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: Codificamos o enum EstadoGaveta, pois a gaveta poderá apenas estar aberta ou fechada, tornando-se valores constantes.
 
-Ricardo de Paula: 
+Ricardo de Paula: Como a gaveta estará somente em dois estados, codificamos de tal forma, já que serão estados constantes.
 
 Thauany Domingues:
 
-Tiago Fogolin:  
+Tiago Fogolin: Foi criado um enum para saber se a gaveta está aberta ou fechada, assim facilita o entendimento ao invés de usar valores como 0 ou 1.
 ___
 
 *Codificou propriedades:*
@@ -498,7 +498,7 @@ data class TimeData(var hour: String, var minute: String){
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Cria os atributos de get e set para a classe de horário.
 
 Eduardo Oki: 
 
@@ -506,13 +506,13 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: Codificamos uma propriedade na classe TimeData, a propriedade criada é a time, nela concatena a hora e o minuto, mostrando esses valores e atualizando-os com o passar do tempo, pois as horas sempre ficam mudando com o tempo.
 
-Ricardo de Paula: 
+Ricardo de Paula: Na classe TimeData, definimos como propriedade privada Time na qual junta hora e minuto, e vai pegando a hora e minuto atual e substitui a hora e minuto que se encontra desatualizado
 
 Thauany Domingues:
 
-Tiago Fogolin:
+Tiago Fogolin: Nessa classe utilizamos propriedades para poder atribuir individualmente o horário e o minuto, assim como ter acesso a eles individualmente também, ou juntos pelo método getTime.
 ___
 
 *Codificou classes abstratas ou classes virtuais:*
@@ -527,7 +527,7 @@ abstract class Connection(private val ip: String, private val port: String) {
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Criou a classe abstrata para a conexão do aplicativo com a esp.
 
 Eduardo Oki: 
 
@@ -535,13 +535,13 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: Criamos uma classe abstrata chamada Connection que é utilizada para passar os dados do app para um servidor.
 
-Ricardo de Paula: 
+Ricardo de Paula: Foi criado uma classe abstrata com o nome Connection na qual é responsável para enviar dados do Aplicativo para o servidor;
 
 Thauany Domingues:
 
-Tiago Fogolin:    
+Tiago Fogolin: A classe Connection é uma classe abstrata ou interface, que serve para mostrar o que toda classe de conexão que vir a existir precisa possuir, que nesse caso é um ip e uma porta e uma função para enviar mensagem.   
 ___
 
 **Design:**
@@ -579,7 +579,7 @@ ___
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Criou a classe de dados para o horário atual.
 
 Eduardo Oki: 
 
@@ -587,13 +587,13 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: A classe de dados criado é a TimeData, pois facilita quando for mostrar e modificar os valores de hora e minuto, além de ter um construtor automático que facilita em ter um código mais limpo.
 
-Ricardo de Paula: 
+Ricardo de Paula: Criamos a dataclass TimeData para simplificar a criação de classes, ajudando na criação e edição tanto da hora como minuto, assim deixando um codigo mais limpo.
 
 Thauany Domingues:
 
-Tiago Fogolin:
+Tiago Fogolin: Essa é uma classe de dados criada para facilitar o que será mandado para a esp, que será uma string contendo hora e minuto.
 ___
 
 **Boas Práticas**
@@ -613,7 +613,7 @@ fun makeDefaultConnection(): HTTPConnection {
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Criou padrão dos valores default do ip e da porta para a conexão HTTP.
 
 Eduardo Oki: 
 
@@ -621,13 +621,13 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: Utilizamos o método Factory Method na função makeDefaultConnection para facilitar o entendimento, reutiliza-los várias vezes, fornecer interfaces claras e melhorar a manutenção do código.
 
-Ricardo de Paula: 
+Ricardo de Paula: O método fabrica foi usado na função makeDefaultConnection, melhorando assim a manutenção do código, a forma na qual o código é entendido, assim também reutilizando-o e disponibilizar interfaces bem nítidas.
 
 Thauany Domingues:
 
-Tiago Fogolin: 
+Tiago Fogolin: Um padrão de projeto que utilizamos foi o factory method. Nesse exemplo, foi criado um método fábrica para criar instâncias da classe HTTPConnection com algum ip e porta padrão para que não precise se repetir ao longo do código.
 ___
 *Usou conceitos de SOLID*
 
@@ -641,7 +641,7 @@ abstract class Connection(private val ip: String, private val port: String) {
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Usou o princípio do ABERTO/FECHADO do conceito de SOLID para a criação da classe da conexão com a esp.
 
 Eduardo Oki: 
 
@@ -649,13 +649,13 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: Utilizamos o conceito Princípio de Responsabilidade Única (SRP) na classe abstrata Connection, pois ela possui uma única responsabilidade.
 
-Ricardo de Paula: 
+Ricardo de Paula: Usamos o Princípio de Responsabilidade Única (SRP) dentro da classe Connection, sendo ela abstrata, na qual como diz o princípio a classe tem somente uma responsabilidade.
 
 Thauany Domingues:
 
-Tiago Fogolin:
+Tiago Fogolin: O conceito de SOLID demosntrado pela interface Connection seria o conceito do aberto e fechado, em que essa classe está fechada para modificações, mas ela aceita extensões, ou seja, novas classes que sigam essa interface sem precisar alterá-la.
 
 ___
 **Extras**
@@ -664,10 +664,11 @@ ___
 
 *Versionou todo o projeto integrador com GIT*
 
+GitLog: (https://github.com/Tiago-Fogolin/OMA/blob/master/git_log.txt)
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Usou GIT para versionar o projeto.
 
 Eduardo Oki: 
 
@@ -675,21 +676,22 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: Utilizamos o GitHub para termos uma melhor organização e comunicação do projeto com os integrantes do grupo.
 
-Ricardo de Paula: 
+Ricardo de Paula: Foi versionado todo o projeto no Github, tendo assim controle e organização do projeto
 
 Thauany Domingues:
 
-Tiago Fogolin: 
+Tiago Fogolin: Todo o código foi versionado usando git para facilitar as modificações do projeto.
 
 ___
 *Publicou todo projeto integrador no Gitlab, Github, ou semelhantes*
 
+(github.com/Tiago-Fogolin/OMA)
 
 Explicações:
 
-Artur Badona: 
+Artur Badona: Publicou o projeto no GitHub.s 
 
 Eduardo Oki: 
 
@@ -697,10 +699,11 @@ Eduardo Petricone:
 
 Luan Motta: 
 
-Raul Mozart: 
+Raul Mozart: Ao finalizar o projeto integrador, publicamos o projeto no Github para que quem queira ver os códigos do projeto sintam-se à vontade de visualizá-los.
 
-Ricardo de Paula: 
+Ricardo de Paula: Assim como foi usado em todo o projeto, publicamos o projeto no Github
 
 Thauany Domingues:
 
-Tiago Fogolin:     
+Tiago Fogolin: O projeto foi publicado no github, para que fosse possível todos os integrantes do grupo acompanharem o projeto ou ter os arquivos dele em mãos.   
+
