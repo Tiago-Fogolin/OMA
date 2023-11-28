@@ -16,31 +16,33 @@ class OpenClose: Activity() {
 
         val currentView = findViewById<View>(android.R.id.content)
         val timersBtn = NavPageButton(R.id.timers_btn, currentView,this,Timers::class.java)
-        var openCloseButtons = emptyArray<OpenCloseButton>()
-        OpenCloseButton.contador = 1
-        for(i in 1 until 4){
-            var btn_id = resources.getIdentifier("abre_fecha$i", "id", packageName)
-            var btn = OpenCloseButton(btn_id, currentView)
-            openCloseButtons += btn
+        val items = ArrayList<String>()
+        items.add("Gaveta 1")
+        val adapter = OpenCloseAdapter(this, items)
+
+        val listView: ListView = findViewById(R.id.listView)
+        listView.adapter = adapter
+
+        val btnAdd = findViewById<Button>(R.id.btn_add)
+        btnAdd.setOnClickListener(){
+            var index = items.size + 1
+            if(index < 4){
+                var btnText = "Gaveta $index"
+                items.add(btnText)
+                adapter.notifyDataSetChanged()
+            }
+
+        }
+        val btnRemove = findViewById<Button>(R.id.btn_remove)
+        btnRemove.setOnClickListener(){
+            var index = items.size
+            if(index > 0){
+                items.removeAt(index-1)
+                adapter.notifyDataSetChanged()
+            }
+
         }
 
-        var text = ArrayList<String>()
-        text.add("Teste")
-        var myListAdapter = MyListAdapter(this, text)
-        var listView = findViewById<ListView>(R.id.listView)
-        listView.adapter = myListAdapter
-        var btn_add = findViewById<Button>(R.id.btn_add)
-        btn_add.setOnClickListener(){
-            text.add("Outro teste")
-            myListAdapter = MyListAdapter(this, text)
-            listView.adapter = myListAdapter
-        }
-
-        listView.setOnItemClickListener(){adapterView, view, position, id ->
-            val itemAtPos = adapterView.getItemAtPosition(position)
-            val itemIdAtPos = adapterView.getItemIdAtPosition(position)
-            Toast.makeText(this, "Click on item at $itemAtPos its item id $itemIdAtPos", Toast.LENGTH_LONG).show()
-        }
 
     }
 }

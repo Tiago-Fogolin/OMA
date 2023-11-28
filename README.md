@@ -687,7 +687,7 @@ Tiago Fogolin: Todo o código foi versionado usando git para facilitar as modifi
 ___
 *Publicou todo projeto integrador no Gitlab, Github, ou semelhantes*
 
-(github.com/Tiago-Fogolin/OMA)
+Github: (https://github.com/Tiago-Fogolin/OMA)
 
 Explicações:
 

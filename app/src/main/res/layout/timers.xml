@@ -45,110 +45,52 @@
         android:paddingTop="23dp"
         android:paddingRight="1dp"
         android:paddingBottom="23dp"
-        app:layout_constraintBottom_toTopOf="@+id/gaveta1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <TextView
-        android:id="@+id/gaveta1"
-        style="@style/BotaoEstilo"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="60dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="60dp"
-        android:text="@string/Gaveta1"
-        android:textAlignment="viewEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="396dp"
+        android:layout_height="834dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timers_btn" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TimePicker
-        android:id="@+id/datePicker1"
-        android:layout_width="222dp"
-        android:layout_height="156dp"
-        android:layout_marginBottom="4dp"
-        android:timePickerMode="spinner"
-        app:layout_constraintBottom_toBottomOf="@+id/gaveta1"
-        app:layout_constraintEnd_toEndOf="@+id/gaveta1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/gaveta1" />
-
-
-    <TextView
-        android:id="@+id/gaveta2"
-        style="@style/BotaoEstilo"
-        android:layout_width="349dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="60dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="60dp"
-        android:text="@string/Gaveta2"
-        android:textAlignment="viewEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.451"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gaveta1" />
-
-    <TimePicker
-        android:id="@+id/datePicker2"
-        android:layout_width="213dp"
-        android:layout_height="157dp"
-        android:timePickerMode="spinner"
-        app:layout_constraintBottom_toBottomOf="@+id/gaveta2"
-        app:layout_constraintEnd_toEndOf="@+id/gaveta2"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/gaveta2" />
-
-    <TextView
-        android:id="@+id/gaveta3"
-        style="@style/BotaoEstilo"
-        android:layout_width="356dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="60dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="60dp"
-        android:text="@string/Gaveta3"
-        android:textAlignment="viewEnd"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gaveta2" />
-
-    <TimePicker
-        android:id="@+id/datePicker3"
-        android:layout_width="214dp"
-        android:layout_height="153dp"
-        android:timePickerMode="spinner"
-        app:layout_constraintBottom_toBottomOf="@+id/gaveta3"
-        app:layout_constraintEnd_toEndOf="@+id/gaveta3"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/gaveta3" />
 
     <Button
         android:id="@+id/sendButton"
         style="@style/Enviar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginBottom="128dp"
         android:text="@string/Enviar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="648dp"
+        android:text="Adicionar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gaveta3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="240dp"
+        android:layout_marginTop="648dp"
+        android:text="Remover"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

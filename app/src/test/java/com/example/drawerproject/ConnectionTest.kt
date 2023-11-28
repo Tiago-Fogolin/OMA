@@ -1,4 +1,4 @@
-import com.example.drawerproject.Connection
+import com.example.drawerproject.HTTPConnection
 import kotlinx.coroutines.runBlocking
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
@@ -10,14 +10,14 @@ import java.net.HttpURLConnection
 class ConnectionTest {
 
     private lateinit var server: MockWebServer
-    private lateinit var connection: Connection
+    private lateinit var connection: HTTPConnection
 
     @Before
     fun setUp() {
         server = MockWebServer()
         server.start()
         val baseUrl = server.url("/")
-        connection = Connection(baseUrl.host, baseUrl.port.toString())
+        connection = HTTPConnection(baseUrl.host, baseUrl.port.toString())
     }
 
     @After

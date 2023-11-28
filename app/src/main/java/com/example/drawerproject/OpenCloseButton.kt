@@ -1,7 +1,6 @@
-import android.content.Context
 import android.view.View
 import android.widget.Button
-import com.example.drawerproject.Connection
+import com.example.drawerproject.HTTPConnection
 
 class OpenCloseButton(private val btnId: Int, private val currentView: View) {
     val btn = currentView.findViewById<Button>(btnId)
@@ -13,7 +12,7 @@ class OpenCloseButton(private val btnId: Int, private val currentView: View) {
         contador++
 
         btn.setOnClickListener {
-            val conn = Connection.makeDefaultConnection()
+            val conn = HTTPConnection.makeDefaultConnection()
             conn.sendMessage("$contInt")
         }
 
