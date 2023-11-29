@@ -9,4 +9,6 @@
     <string name="Gaveta3">Gaveta 3</string>
     <string name="AbreFecha">Abre/Fecha</string>
     <string name="Enviar">Enviar</string>
+    <string name="Adicionar">Adicionar</string>
+    <string name="Remover">Remover</string>
 </resources>

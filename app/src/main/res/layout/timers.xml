@@ -55,41 +55,48 @@
         android:layout_width="396dp"
         android:layout_height="834dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="80dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
     <Button
         android:id="@+id/sendButton"
-        style="@style/Enviar"
+        style="@style/BotaoAdicionar_remover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="128dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="648dp"
+        android:padding="10dp"
         android:text="@string/Enviar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_remove"
+        app:layout_constraintHorizontal_bias="0.384"
+        app:layout_constraintStart_toEndOf="@+id/btn_add"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_add"
+        style="@style/BotaoAdicionar_remover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="648dp"
-        android:text="Adicionar"
+        android:padding="10dp"
+        android:text="@string/Adicionar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_remove"
+        style="@style/BotaoAdicionar_remover"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="240dp"
         android:layout_marginTop="648dp"
-        android:text="Remover"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="32dp"
+        android:padding="10dp"
+        android:text="@string/Remover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.969"
+        app:layout_constraintStart_toEndOf="@+id/btn_add"
         app:layout_constraintTop_toTopOf="parent" />
 
 
