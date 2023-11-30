@@ -427,7 +427,7 @@ Eduardo Oki: As bibliotecas que nós usamos foram a RTC lib para utilizarmos e c
 
 Eduardo Petricone: Usamos a biblioteca RTC Lib para usar o RTC e a PWM para medir a quantidade de energia enviada para o hardware
 
-Luan Motta: 
+Luan Motta: Instalamos e usamos libs de terceiros, principalmente no códiga da esp32, RTC Lib e PWM, são exemplos disso, sendo a primeira necessária para trabalharmos com o RTC.
 
 Raul Mozart: Utilizamos as bibliotecas RTC Lib e a PWM, a RTC Lib foi utilizada para podermos mexer no componente do RTC e usamos também a PWM para controlar a quantidade de energia fornecida aos dispositivos elétricos. 
 
@@ -456,7 +456,8 @@ Eduardo Oki: Utilizamos o enum para o estado da gaveta pois elas são constantes
 
 Eduardo Petricone: Para ver se a gaveta esta aberta ou fechada, utilizamos o enum.
 
-Luan Motta: 
+Luan Motta: O enum EstadoGaveta é usado para representar os dois estados possíveis de uma gaveta: aberta ou fechada. O código fica mais legível e fácil de entender, pois permite o uso de nomes significativos para os estados da gaveta, ABERTA e FECHADA.
+
 
 Raul Mozart: Codificamos o enum EstadoGaveta, pois a gaveta poderá apenas estar aberta ou fechada, tornando-se valores constantes.
 
@@ -504,7 +505,7 @@ Eduardo Oki: Utilizamos uma propriedade na classe TimeData, onde a propriedade q
 
 Eduardo Petricone: Na classe TimeData, utilizamos uma propriedade time para separar o horário e o minuto para atribuir individualmente seus valores
 
-Luan Motta: 
+Luan Motta: Codificamos propriedades na classe TimeData, para encapsular os atributos hour e minute e fornecer métodos seguros para acessar e modificar seus valores. Isso melhora o encapsulamento, a segurança, a abstração e a legibilidade do código.
 
 Raul Mozart: Codificamos uma propriedade na classe TimeData, a propriedade criada é a time, nela concatena a hora e o minuto, mostrando esses valores e atualizando-os com o passar do tempo, pois as horas sempre ficam mudando com o tempo.
 
@@ -533,7 +534,7 @@ Eduardo Oki: Foi criada a classe abstrata que nós chamamos de Connection onde e
 
 Eduardo Petricone: Aqui criamos uma classe Connection abstrata para conectar o aplicativo com a esp
 
-Luan Motta: 
+Luan Motta: Codificamos a classe abstrata Connection, que abstrai os detalhes específicos da implementação da conexão, permitindo que suas subclasses se concentrem em implementar o comportamento específico para cada tipo, a reutilização de código e a flexibilidade no desenvolvimento de aplicações que utilizam conexões de rede.
 
 Raul Mozart: Criamos uma classe abstrata chamada Connection que é utilizada para passar os dados do app para um servidor.
 
@@ -585,7 +586,7 @@ Eduardo Oki: A classe de dados que nós criamos foi a TimeData, ela facilita e a
 
 Eduardo Petricone: Criamos a classe TimeData para facilitar a exibição e a modificação da hora e minuto.
 
-Luan Motta: 
+Luan Motta: Codificamos a classe TimeData como uma classe de dados declarando como data, sendo seus atributos imutáveis, e ela gera automaticamente métodos úteis para acessar, modificar e controlar esses dados.
 
 Raul Mozart: A classe de dados criado é a TimeData, pois facilita quando for mostrar e modificar os valores de hora e minuto, além de ter um construtor automático que facilita em ter um código mais limpo.
 
@@ -619,7 +620,7 @@ Eduardo Oki: Nós usamos o método Factory Method na função makeDefaultConnect
 
 Eduardo Petricone: Usamos o factory method para otimizar a compreensão do código, também foi criado a porta e o ip para realizar a conexão HTTP
 
-Luan Motta: 
+Luan Motta: Codificamos o método fábrica makeDefaultConnection, que cria uma instância da classe HTTPConnection com valores padrão para os atributos ip e port, tornando o código mais legível.
 
 Raul Mozart: Utilizamos o método Factory Method na função makeDefaultConnection para facilitar o entendimento, reutiliza-los várias vezes, fornecer interfaces claras e melhorar a manutenção do código.
 
@@ -647,7 +648,8 @@ Eduardo Oki: Aqui nós utilizamos o conceito de Princípio de Responsabilidade(S
 
 Eduardo Petricone: O SOLID utilizado no código serve para utilizar o conceito de aberto/fechado.
 
-Luan Motta: 
+Luan Motta: Usamos o  princípio do aberto/fechado na classe Connection declarando o método sendMessage como abstrato. Permitindo que novas subclasses sejam criadas para implementar diferentes tipos de conexões sem modificar o código.
+
 
 Raul Mozart: Utilizamos o conceito Princípio de Responsabilidade Única (SRP) na classe abstrata Connection, pois ela possui uma única responsabilidade.
 
@@ -674,7 +676,7 @@ Eduardo Oki: Utilizamos o GitHub para ajudar na organização do projeto compart
 
 Eduardo Petricone:
 
-Luan Motta: 
+Luan Motta: Utilizamos Git para versionar todo o projeto.
 
 Raul Mozart: Utilizamos o GitHub para termos uma melhor organização e comunicação do projeto com os integrantes do grupo.
 
@@ -697,7 +699,7 @@ Eduardo Oki: Publicamos o projeto integrador no Github para podemos compartilhar
 
 Eduardo Petricone:
 
-Luan Motta: 
+Luan Motta: Publicamos todo o projeto no GitHub para o acompanhamento do andamento do mesmo.
 
 Raul Mozart: Ao finalizar o projeto integrador, publicamos o projeto no Github para que quem queira ver os códigos do projeto sintam-se à vontade de visualizá-los.
 
