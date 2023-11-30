@@ -423,9 +423,9 @@ Explicações:
 
 Artur Badona: Utilizou as bibliotecas RTC Lib e PWM no código da esp, para obter o tempo atual e controlar o servo motor.
 
-Eduardo Oki: 
+Eduardo Oki: As bibliotecas que nós usamos foram a RTC lib para utilizarmos e configurar o RTC, e a biblioteca PWM para poder controlar a energia fornecida aos componentes. 
 
-Eduardo Petricone:
+Eduardo Petricone: Usamos a biblioteca RTC Lib para usar o RTC e a PWM para medir a quantidade de energia enviada para o hardware
 
 Luan Motta: 
 
@@ -433,7 +433,7 @@ Raul Mozart: Utilizamos as bibliotecas RTC Lib e a PWM, a RTC Lib foi utilizada 
 
 Ricardo de Paula: Usamos o RTC Lib para configurar e utilizar o RTC, na qual é responsável por salvar o horário atual e por meio de uma bateria própria mantém o horário atualizado. Usamos a PWM para controlar a quantidade de energia dirigida aos dispositivos.
 
-Thauany Domingues:
+Thauany Domingues: Utilizamos bibliotecas de terceiros tanto no código da ESP quanto no do aplicativo, alguns exemplos são: RTC Lib e a PWM.
 
 Tiago Fogolin: As bibliotecas utilizadas na esp serviram para fazer funcionar o RTC (RTC Lib), que além de conseguir conectar o componente, adiciona funções para pegar o horário e data atual, e o servo motor (PWM) que possibilita fazer o servo girar.
 ___
@@ -452,9 +452,9 @@ Explicações:
 
 Artur Badona: Criou enums para as constantes do estado da gaveta (aberta ou fechada).
 
-Eduardo Oki: 
+Eduardo Oki: Utilizamos o enum para o estado da gaveta pois elas são constantes onde apenas terá o estado aberta ou fechada.
 
-Eduardo Petricone:
+Eduardo Petricone: Para ver se a gaveta esta aberta ou fechada, utilizamos o enum.
 
 Luan Motta: 
 
@@ -462,7 +462,7 @@ Raul Mozart: Codificamos o enum EstadoGaveta, pois a gaveta poderá apenas estar
 
 Ricardo de Paula: Como a gaveta estará somente em dois estados, codificamos de tal forma, já que serão estados constantes.
 
-Thauany Domingues:
+Thauany Domingues: Um exemplo de enum que nós criamos foi o “EstadoGaveta”, no qual há dois valores/enumeradores possíveis “ABERTA” e ”FECHADA”.
 
 Tiago Fogolin: Foi criado um enum para saber se a gaveta está aberta ou fechada, assim facilita o entendimento ao invés de usar valores como 0 ou 1.
 ___
@@ -500,9 +500,9 @@ Explicações:
 
 Artur Badona: Cria os atributos de get e set para a classe de horário.
 
-Eduardo Oki: 
+Eduardo Oki: Utilizamos uma propriedade na classe TimeData, onde a propriedade que criamos é a time, ela serve para concatenar o minuto e a hora, para mostrar esses valores e utiliza-los com o passar do tempo, pois as horas sempre variam com o tempo.
 
-Eduardo Petricone:
+Eduardo Petricone: Na classe TimeData, utilizamos uma propriedade time para separar o horário e o minuto para atribuir individualmente seus valores
 
 Luan Motta: 
 
@@ -510,7 +510,7 @@ Raul Mozart: Codificamos uma propriedade na classe TimeData, a propriedade criad
 
 Ricardo de Paula: Na classe TimeData, definimos como propriedade privada Time na qual junta hora e minuto, e vai pegando a hora e minuto atual e substitui a hora e minuto que se encontra desatualizado
 
-Thauany Domingues:
+Thauany Domingues: A data class “TimeData” é um exemplo para esse requisito no qual codificamos as seguintes propriedades: hour - uma propriedade que armazena a hora como uma string; minute - uma propriedade que armazena os minutos como uma string; time - uma propriedade privada que é uma combinação de hour e minute formatados como uma string no formato "hour:minute".
 
 Tiago Fogolin: Nessa classe utilizamos propriedades para poder atribuir individualmente o horário e o minuto, assim como ter acesso a eles individualmente também, ou juntos pelo método getTime.
 ___
@@ -529,9 +529,9 @@ Explicações:
 
 Artur Badona: Criou a classe abstrata para a conexão do aplicativo com a esp.
 
-Eduardo Oki: 
+Eduardo Oki: Foi criada a classe abstrata que nós chamamos de Connection onde ela vai ser utilizada para passar os dados do aplicativo para o servidor HTTP.
 
-Eduardo Petricone:
+Eduardo Petricone: Aqui criamos uma classe Connection abstrata para conectar o aplicativo com a esp
 
 Luan Motta: 
 
@@ -539,7 +539,7 @@ Raul Mozart: Criamos uma classe abstrata chamada Connection que é utilizada par
 
 Ricardo de Paula: Foi criado uma classe abstrata com o nome Connection na qual é responsável para enviar dados do Aplicativo para o servidor;
 
-Thauany Domingues:
+Thauany Domingues: A classe abstrata Connection possui o método abstrato sendMessage que deve ser implementado nas subclasses  nas quais for utilizado. 
 
 Tiago Fogolin: A classe Connection é uma classe abstrata ou interface, que serve para mostrar o que toda classe de conexão que vir a existir precisa possuir, que nesse caso é um ip e uma porta e uma função para enviar mensagem.   
 ___
@@ -581,9 +581,9 @@ Explicações:
 
 Artur Badona: Criou a classe de dados para o horário atual.
 
-Eduardo Oki: 
+Eduardo Oki: A classe de dados que nós criamos foi a TimeData, ela facilita e ajuda para mostrar e modificar os valores de minuto e hora, além disso possui um construtor automático que também facilita na hora de ter um código mais limpo.
 
-Eduardo Petricone:
+Eduardo Petricone: Criamos a classe TimeData para facilitar a exibição e a modificação da hora e minuto.
 
 Luan Motta: 
 
@@ -591,7 +591,7 @@ Raul Mozart: A classe de dados criado é a TimeData, pois facilita quando for mo
 
 Ricardo de Paula: Criamos a dataclass TimeData para simplificar a criação de classes, ajudando na criação e edição tanto da hora como minuto, assim deixando um codigo mais limpo.
 
-Thauany Domingues:
+Thauany Domingues: A TimeData é um exemplo de classes de dados presente no projeto, o que fica evidenciado pela palavra-chave data class, ela armazena os dados de tempo que serão usados na comunicação entre a abertura da gaveta e o despertador do aplicativo.
 
 Tiago Fogolin: Essa é uma classe de dados criada para facilitar o que será mandado para a esp, que será uma string contendo hora e minuto.
 ___
@@ -615,9 +615,9 @@ Explicações:
 
 Artur Badona: Criou padrão dos valores default do ip e da porta para a conexão HTTP.
 
-Eduardo Oki: 
+Eduardo Oki: Nós usamos o método Factory Method na função makeDefaultConnection, que serve para ajudar e facilitar no entendimento além de reutiliza-los novamente, fornece interfaces mais claras e também melhora na manutenção do código.
 
-Eduardo Petricone:
+Eduardo Petricone: Usamos o factory method para otimizar a compreensão do código, também foi criado a porta e o ip para realizar a conexão HTTP
 
 Luan Motta: 
 
@@ -625,7 +625,7 @@ Raul Mozart: Utilizamos o método Factory Method na função makeDefaultConnecti
 
 Ricardo de Paula: O método fabrica foi usado na função makeDefaultConnection, melhorando assim a manutenção do código, a forma na qual o código é entendido, assim também reutilizando-o e disponibilizar interfaces bem nítidas.
 
-Thauany Domingues:
+Thauany Domingues: O conceito que utilizamos que se enquadra em padrões de projeto é o de métodos fábrica. Esse é um exemplo de método (makeDefaultConnection ) que cria e retorna as instâncias da classe HTTPConnection
 
 Tiago Fogolin: Um padrão de projeto que utilizamos foi o factory method. Nesse exemplo, foi criado um método fábrica para criar instâncias da classe HTTPConnection com algum ip e porta padrão para que não precise se repetir ao longo do código.
 ___
@@ -643,9 +643,9 @@ Explicações:
 
 Artur Badona: Usou o princípio do ABERTO/FECHADO do conceito de SOLID para a criação da classe da conexão com a esp.
 
-Eduardo Oki: 
+Eduardo Oki: Aqui nós utilizamos o conceito de Princípio de Responsabilidade(SRP) na classe abstrata Connection porque essa classe possui somente uma responsabilidade.
 
-Eduardo Petricone:
+Eduardo Petricone: O SOLID utilizado no código serve para utilizar o conceito de aberto/fechado.
 
 Luan Motta: 
 
@@ -653,7 +653,7 @@ Raul Mozart: Utilizamos o conceito Princípio de Responsabilidade Única (SRP) n
 
 Ricardo de Paula: Usamos o Princípio de Responsabilidade Única (SRP) dentro da classe Connection, sendo ela abstrata, na qual como diz o princípio a classe tem somente uma responsabilidade.
 
-Thauany Domingues:
+Thauany Domingues: O princípio de SOLID demonstrado na classe Connection é o de Aberto/Fechado (aberto para extensão, fechado para modificação), pois novas classes podem ser criadas para estender a funcionalidade da Connection sem modificar a classe base e ela não precisa ser alterada quando novas classes são adicionadas para lidar com diferentes tipos de conexão, sendo extensível. 
 
 Tiago Fogolin: O conceito de SOLID demosntrado pela interface Connection seria o conceito do aberto e fechado, em que essa classe está fechada para modificações, mas ela aceita extensões, ou seja, novas classes que sigam essa interface sem precisar alterá-la.
 
@@ -670,7 +670,7 @@ Explicações:
 
 Artur Badona: Usou GIT para versionar o projeto.
 
-Eduardo Oki: 
+Eduardo Oki: Utilizamos o GitHub para ajudar na organização do projeto compartilhando os códigos, além de ajudar na comunicação do restante do grupo.
 
 Eduardo Petricone:
 
@@ -680,7 +680,7 @@ Raul Mozart: Utilizamos o GitHub para termos uma melhor organização e comunica
 
 Ricardo de Paula: Foi versionado todo o projeto no Github, tendo assim controle e organização do projeto
 
-Thauany Domingues:
+Thauany Domingues: Todo o projeto foi versionado no GIT
 
 Tiago Fogolin: Todo o código foi versionado usando git para facilitar as modificações do projeto.
 
@@ -693,7 +693,7 @@ Explicações:
 
 Artur Badona: Publicou o projeto no GitHub.s 
 
-Eduardo Oki: 
+Eduardo Oki: Publicamos o projeto integrador no Github para podemos compartilhar o código com o resto do mundo.
 
 Eduardo Petricone:
 
@@ -703,7 +703,7 @@ Raul Mozart: Ao finalizar o projeto integrador, publicamos o projeto no Github p
 
 Ricardo de Paula: Assim como foi usado em todo o projeto, publicamos o projeto no Github
 
-Thauany Domingues:
+Thauany Domingues: Todo o projeto foi publicado no GitHub.
 
 Tiago Fogolin: O projeto foi publicado no github, para que fosse possível todos os integrantes do grupo acompanharem o projeto ou ter os arquivos dele em mãos.   
 
